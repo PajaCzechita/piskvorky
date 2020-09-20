@@ -1,63 +1,76 @@
 body {
   background-image: linear-gradient(to bottom, #615dad, #ffc8da);
   height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
 }
 
 p {
-  margin: 0;
+  margin: 15px;
   text-align: center;
   color: #ffffff;
+  padding-bottom: 40px;
+  padding-top: 20px;
 }
 
 h1 {
   text-align: center;
   color: #ffffff;
+  font-family: 'Lobster', cursive;
+  font-weight: 100;
+  font-size: 50px;
 }
-
-/*styly tříd*/
 
 .game {
-  display: flex;
-  display: block;
-  width: 490px;
-  height: 770px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.introduction {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
+  width: 420px;
+  margin: auto;
+  margin-top: 100px;
   background-color: #283e50;
-  padding-bottom: 10px;
-  margin-bottom: 5px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  font-size: large;
 }
 
-.buttons {
-  display: flex;
-  flex-direction: column;
+a {
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+}
+
+.links {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.buttons li {
+  text-align: center;
+  padding: 0px;
 }
 
 .rules {
   background-color: #1fcca4;
   text-align: center;
   color: #ffffff;
-  font-size: large;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  margin-bottom: 1px;
+}
+
+.rules:hover{
+  background-color: #1cbb96;
 }
 
 .play {
   background-color: #0197f6;
   text-align: center;
   color: #ffffff;
-  font-size: large;
-  padding-top: 5px;
-  padding-bottom: 5px;
 }
 
-.main {
-  display: block;
+.play:hover{
+  background-color: #0090e9;
+}
+
+.mainfoto {
   width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
