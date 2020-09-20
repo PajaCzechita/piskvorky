@@ -1,8 +1,18 @@
+/* Uprava - elemnts */
+
 body {
   background-image: linear-gradient(to bottom, #615dad, #ffc8da);
   height: 100vh;
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Lobster', cursive;
+  font-weight: 100;
+  font-size: 50px;
 }
 
 p {
@@ -13,13 +23,13 @@ p {
   padding-top: 20px;
 }
 
-h1 {
-  text-align: center;
-  color: #ffffff;
-  font-family: 'Lobster', cursive;
-  font-weight: 100;
-  font-size: 50px;
+a {
+  display: block;
+  text-decoration: none;
+  padding: 20px;
 }
+
+/* Uprava nad tridama*/
 
 .game {
   width: 420px;
@@ -31,12 +41,14 @@ h1 {
   font-size: large;
 }
 
-a {
-  display: block;
-  text-decoration: none;
-  padding: 20px;
+/* Uprava fotky */
+.mainfoto {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
+/* Uprava tlacitek */
 .links {
   padding: 0;
   margin: 0;
@@ -55,7 +67,7 @@ a {
   margin-bottom: 1px;
 }
 
-.rules:hover{
+.rules:hover {
   background-color: #1cbb96;
 }
 
@@ -65,12 +77,6 @@ a {
   color: #ffffff;
 }
 
-.play:hover{
+.play:hover {
   background-color: #0090e9;
-}
-
-.mainfoto {
-  width: 100%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
 }
