@@ -1,10 +1,14 @@
 /* Uprava - elemnts */
+html { box-sizing: border-box; }
+*, :after, :before { box-sizing: inherit; }
 
 body {
   background-image: linear-gradient(to bottom, #615dad, #ffc8da);
   min-height: 100vh;
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
+  margin: 0;
+  padding-top: 100px;
 }
 
 h1 {
@@ -34,7 +38,6 @@ a {
 .game {
   width: 420px;
   margin: auto;
-  margin-top: 100px;
   background-color: #283e50;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
