@@ -2,7 +2,7 @@
 
 body {
   background-image: linear-gradient(to bottom, #615dad, #ffc8da);
-  height: 100vh;
+  min-height: 100vh;cd
   font-family: 'Open Sans', sans-serif;
   font-size: 15px;
 }
