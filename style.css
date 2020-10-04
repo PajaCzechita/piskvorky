@@ -9,6 +9,7 @@ body {
   font-size: 15px;
   margin: 0;
   padding-top: 100px;
+  padding-bottom: 30px;
 }
 
 h1 {
@@ -85,6 +86,100 @@ a {
 }
 
 /* Styles for "Pravidla" */
+ol li {
+  margin: 15px;
+  text-align: left;
+  color: #ffffff;
+  padding-top: 10px;
+}
+
+h1.title {
+  padding-top: 40px;
+}
+
 .instruction img {
   width: 100%;
+}
+
+.instruction {
+  padding-bottom: 40px;
+}
+
+.mainInstruction {
+  margin-top: 50px;
+}
+
+
+figure {
+  padding: 0;
+  margin: 0;
+  font-style: italic;
+  color: white;
+  text-align: center;
+}
+
+.game.two {
+  width: 400px;
+}
+
+.zkusimpadding {
+  padding-left: 30px;
+  padding-right: 30px;;
+}
+
+/* Vytvoření kolečka a křížku */
+.circle {
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-left: 5px;
+  position: relative;
+    top: 3px;
+}
+
+.cross {
+  position: relative;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+}
+
+.cross:before, .cross:after {
+  position: absolute;
+  left: 50%;
+  top: 6px;
+  content: ' ';
+  height: 100%;
+  width: 2px;
+  background-color: white;
+}
+.cross:before {
+  transform: rotate(45deg);
+}
+.cross:after {
+  transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 660px) {
+.game.two {
+  width: 90%;
+  max-width: 750px;
+}
+
+.mainInstruction {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.instruction {
+  flex: 1 1 48%;
+  }
+
+.instruction:nth-child(2n) {
+  margin-left: 2%;
+}
+
 }
