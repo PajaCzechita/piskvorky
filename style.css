@@ -83,3 +83,8 @@ a {
 .play:hover {
   background-color: #0090e9;
 }
+
+/* Styles for "Pravidla" */
+.instruction img {
+  width: 100%;
+}
