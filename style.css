@@ -88,13 +88,13 @@ a {
 /* Styles for "Pravidla" */
 ol li {
   margin: 15px;
-  text-align: left;
   color: #ffffff;
   padding-top: 10px;
 }
 
 h1.title {
   padding-top: 40px;
+  margin: 0;
 }
 
 .instruction img {
