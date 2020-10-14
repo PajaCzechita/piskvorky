@@ -1,11 +1,17 @@
 /* Uprava - elemnts */
-html { box-sizing: border-box; }
-*, :after, :before { box-sizing: inherit; }
+html {
+  box-sizing: border-box;
+}
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
 
 body {
   background-image: linear-gradient(to bottom, #615dad, #ffc8da);
   min-height: 100vh;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 15px;
   margin: 0;
   padding-top: 100px;
@@ -15,7 +21,7 @@ body {
 h1 {
   text-align: center;
   color: #ffffff;
-  font-family: 'Lobster', cursive;
+  font-family: "Lobster", cursive;
   font-weight: 100;
   font-size: 50px;
 }
@@ -31,13 +37,13 @@ p {
 a {
   display: block;
   text-decoration: none;
-  padding: 20px;
 }
 
 /* Uprava nad tridama*/
 
 .game {
   width: 420px;
+  max-width: 100%;
   margin: auto;
   background-color: #283e50;
   border-top-left-radius: 15px;
@@ -53,10 +59,14 @@ a {
 }
 
 /* Uprava tlacitek */
+
 .links {
   padding: 0;
   margin: 0;
   list-style-type: none;
+}
+.links li a {
+  padding: 20px;
 }
 
 .buttons li {
@@ -109,7 +119,6 @@ h1.title {
   margin-top: 50px;
 }
 
-
 figure {
   padding: 0;
   margin: 0;
@@ -124,7 +133,7 @@ figure {
 
 .zkusimpadding {
   padding-left: 30px;
-  padding-right: 30px;;
+  padding-right: 30px;
 }
 
 /* Vytvoření kolečka a křížku */
@@ -136,7 +145,7 @@ figure {
   display: inline-block;
   margin-left: 5px;
   position: relative;
-    top: 3px;
+  top: 3px;
 }
 
 .cross {
@@ -146,11 +155,12 @@ figure {
   height: 25px;
 }
 
-.cross:before, .cross:after {
+.cross:before,
+.cross:after {
   position: absolute;
   left: 50%;
   top: 6px;
-  content: ' ';
+  content: " ";
   height: 100%;
   width: 2px;
   background-color: white;
@@ -176,9 +186,9 @@ figure {
 /* Menu */
 h2 {
   color: white;
-    font-size: 25px;
-    font-family: sans-serif;
-    font-weight: bold;
+  font-size: 25px;
+  font-family: sans-serif;
+  font-weight: bold;
 }
 /*Tlačítka domu a restart*/
 
@@ -186,27 +196,29 @@ h2 {
   display: flex;
 }
 
-.home__pic,
-.restart__pic {
+.btn {
+  margin-left: 15px;
+}
+.btn_img {
   border-radius: 5px;
   padding: 12px 10px 12px 10px;
 }
 
-.home__pic {
+.btn_img.home {
   background-color: #0197f6;
 }
-.restart__pic {
+.btn_img.restart {
   background-color: #1fcca4;
 }
 
-.home__pic:focus,
-.home__pic:hover {
+.btn_img.home:focus,
+.btn_img.home:hover {
   background-color: #1fcca4;
   opacity: 0.6;
 }
 
-.restart__pic:focus,
-.restart__pic:hover {
+.btn_img.restart:focus,
+.btn_img.restart:hover {
   background-color: #0090e9;
   opacity: 0.8;
 }
@@ -236,19 +248,18 @@ h2 {
     width: 90%;
     max-width: 750px;
   }
-  
+
   .mainInstruction {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
-  
+
   .instruction {
     flex: 1 1 48%;
-    }
-  
+  }
+
   .instruction:nth-child(2n) {
     margin-left: 2%;
   }
-  
-  } /* Konec @MediaQuery*/
+} /* Konec @MediaQuery*/
