@@ -190,7 +190,7 @@ figure {
   flex-direction: column;
 }
 
-.menu {
+.navigation__menu {
   display: flex;
   justify-content: space-between;
 }
