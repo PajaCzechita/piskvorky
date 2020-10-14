@@ -182,4 +182,62 @@ figure {
   margin-left: 2%;
 }
 
+} /* Konec @MediaQuery*/
+
+/* Hrací pole*/
+.game__final {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Menu */
+.game__play {
+  color: white;
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+/*Tlačítka domu a restart*/
+
+.home__pic {
+  background-color: #0197f6;
+}
+.restart__pic {
+  background-color: #1fcca4;
+}
+
+.home__pic,
+.restart__pic {
+  display: flex;
+  width: 45px;
+  height: 45px;
+  margin: 3px;
+  border-radius: 5px;
+}
+
+.home__pic:hover,
+.restart__pic:hover {
+  background-color: #0090e9;
+}
+
+
+
+
+.game__field {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 80vmin;
+}
+
+.btn__game {
+  border: 1px solid black;
+  height: 15px;
+  width;: 15px
 }
