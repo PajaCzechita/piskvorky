@@ -220,7 +220,12 @@ figure {
   border-radius: 5px;
 }
 
-.home__pic:hover,
+.home__pic:focus,
+.home__pic:hover {
+  background-color: #1fcca4;
+}
+
+.restart__pic:focus,
 .restart__pic:hover {
   background-color: #0090e9;
 }
