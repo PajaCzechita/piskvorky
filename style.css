@@ -39,6 +39,13 @@ a {
   text-decoration: none;
 }
 
+h2 {
+  color: white;
+  font-size: 25px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
 /* Uprava nad tridama*/
 
 .game {
@@ -184,12 +191,7 @@ figure {
 }
 
 /* Menu */
-h2 {
-  color: white;
-  font-size: 25px;
-  font-family: sans-serif;
-  font-weight: bold;
-}
+
 /*Tlačítka domu a restart*/
 
 .btns__menu {
