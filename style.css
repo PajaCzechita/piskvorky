@@ -11,7 +11,7 @@ html {
 body {
   background-image: linear-gradient(to bottom, #615dad, #ffc8da);
   min-height: 100vh;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   margin: 0;
   padding-top: 100px;
@@ -21,9 +21,16 @@ body {
 h1 {
   text-align: center;
   color: #ffffff;
-  font-family: "Lobster", cursive;
+  font-family: 'Lobster', cursive;
   font-weight: 100;
   font-size: 50px;
+}
+
+h2 {
+  color: white;
+  font-size: 25px;
+  font-family: sans-serif;
+  font-weight: bold;
 }
 
 p {
@@ -37,13 +44,6 @@ p {
 a {
   display: block;
   text-decoration: none;
-}
-
-h2 {
-  color: white;
-  font-size: 25px;
-  font-family: sans-serif;
-  font-weight: bold;
 }
 
 /* Uprava nad tridama*/
@@ -103,27 +103,27 @@ h2 {
 }
 
 /* Styles for "Pravidla" */
+h1.title {
+  padding-top: 40px;
+  margin: 0;
+}
+
 ol li {
   margin: 15px;
   color: #ffffff;
   padding-top: 10px;
 }
 
-h1.title {
-  padding-top: 40px;
-  margin: 0;
-}
-
-.instruction img {
-  width: 100%;
+.mainInstruction {
+  margin-top: 50px;
 }
 
 .instruction {
-  padding-bottom: 40px;
-}
+padding-bottom: 40px;
+};
 
-.mainInstruction {
-  margin-top: 50px;
+.instruction img {
+  width: 100%;
 }
 
 figure {
@@ -167,7 +167,7 @@ figure {
   position: absolute;
   left: 50%;
   top: 6px;
-  content: " ";
+  content: ' ';
   height: 100%;
   width: 2px;
   background-color: white;
