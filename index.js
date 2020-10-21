@@ -16,15 +16,24 @@
 // 1. 
 
 
-let addMove = 'circle';
+let currentPlayer = 'circle';
 
 const btnElements = document.querySelectorAll('.btn__game');
 
 btnElements.forEach(btn => {
   btn.addEventListener("click", (e) => {
-    e.currentTarget.classList.add('circle')
-    });
-})
+if (currentPlayer === 'circle') {
+    e.currentTarget.classList.add('circle');
+    currentPlayer = 'cross';
+   } else if ((currentPlayer === 'cross')) {
+    e.currentTarget.classList.add('cross');
+currentPlayer = 'circle';
+   } 
+    }); 
+}) 
+
+
+
 
 
 
