@@ -203,6 +203,10 @@ figure {
 
 /* Menu */
 
+span {
+  margin-bottom: 1px;
+}
+
 /*Tlačítka domu a restart*/
 
 .btns__menu {
