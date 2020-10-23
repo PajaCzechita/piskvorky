@@ -119,8 +119,8 @@ ol li {
 }
 
 .instruction {
-padding-bottom: 40px;
-};
+  padding-bottom: 40px;
+}
 
 .instruction img {
   width: 100%;
@@ -145,6 +145,17 @@ figure {
 
 /* Vytvoření kolečka a křížku */
 .circle {
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-left: 5px;
+  position: relative;
+  top: 3px;
+}
+
+.symbol.circle {
   border: 2px solid white;
   border-radius: 50%;
   width: 20px;
@@ -244,6 +255,20 @@ figure {
 .btn__game:hover {
   opacity: 0.7;
 }
+
+
+/* Styles for playing */
+.btn__game span {
+  display: none;
+}
+
+/*
+.btn__game span.circle {
+  display: inline-block;
+}
+*/
+
+
 
 @media screen and (min-width: 660px) {
   .game.two {

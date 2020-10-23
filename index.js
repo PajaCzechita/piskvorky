@@ -1,11 +1,5 @@
 'use strict'
 
-/*KROK 1 Vytvoř si proměnnou, ve které bude uloženo kdo je na tahu. Začíná vždy kolečko, tak rovnou do proměnné přiřaď hodnotu circle.*/
-/* KRO.K 2 Při kliknutí do pole ořidám třídu na btn__game, kt vyzobrazí kolečko*/
-
-
-
-
 // pri kliku na tlacitko:
 // 1. if circle is playing, it draws circle into current field
 // 2. if cross is playing, it draws cross into current field
@@ -17,20 +11,37 @@
 
 
 let currentPlayer = 'circle';
-
 const btnElements = document.querySelectorAll('.btn__game');
+//console.log(btnElements)
+let playersSymbol = document.querySelector('.symbol').classList.add('circle');
+
+const onBtnClick = (e) => {
+  if (currentPlayer === 'circle') {
+      e.currentTarget.classList.add('circle');
+      e.currentTarget.disabled=true;
+      currentPlayer = 'cross';
+
+      playersSymbol = document.querySelector('.symbol').classList.remove('circle');
+      playersSymbol = document.querySelector('.symbol').classList.add('cross');
+
+     } else if ((currentPlayer === 'cross')) {
+      e.currentTarget.classList.add('cross');
+      e.currentTarget.disabled=true;
+      currentPlayer = 'circle';
+
+      playersSymbol = document.querySelector('.symbol').classList.remove('cross');
+      playersSymbol = document.querySelector('.symbol').classList.add('circle');
+     } 
+  }
 
 btnElements.forEach(btn => {
-  btn.addEventListener("click", (e) => {
-if (currentPlayer === 'circle') {
-    e.currentTarget.classList.add('circle');
-    currentPlayer = 'cross';
-   } else if ((currentPlayer === 'cross')) {
-    e.currentTarget.classList.add('cross');
-currentPlayer = 'circle';
-   } 
-    }); 
-}) 
+  btn.addEventListener('click', onBtnClick) 
+});
+
+
+
+//const whoMoves = currentPlayer.querySelector('.navigation__menu').innerHTML; 
+  //document.querySelector('#dnes').innerHTML = namedayHas;
 
 
 
