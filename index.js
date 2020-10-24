@@ -9,9 +9,9 @@
 
 
 let currentPlayer = 'circle';
-const btnElements = document.querySelectorAll('.btn__game');
-//console.log(btnElements)
 let playersSymbol = document.querySelector('.symbol').classList.add('circle');
+
+const btnElements = document.querySelectorAll('.btn__game');
 
 const onBtnClick = (e) => {
   if (currentPlayer === 'circle') {
@@ -19,7 +19,7 @@ const onBtnClick = (e) => {
       e.currentTarget.disabled=true;
       currentPlayer = 'cross';
 
-//upravuje X/O za HRAJE
+      //adjust X/O -> HRAJE
       playersSymbol = document.querySelector('.symbol').classList.remove('circle');
       playersSymbol = document.querySelector('.symbol').classList.add('cross');
 
@@ -28,7 +28,7 @@ const onBtnClick = (e) => {
       e.currentTarget.disabled=true;
       currentPlayer = 'circle';
 
-      //upravuje X/O za HRAJE
+      //adjust X/O -> HRAJE
       playersSymbol = document.querySelector('.symbol').classList.remove('cross');
       playersSymbol = document.querySelector('.symbol').classList.add('circle');
      } 
@@ -37,18 +37,3 @@ const onBtnClick = (e) => {
 btnElements.forEach(btn => {
   btn.addEventListener('click', onBtnClick) 
 });
-
-
-
-//const whoMoves = currentPlayer.querySelector('.navigation__menu').innerHTML; 
-  //document.querySelector('#dnes').innerHTML = namedayHas;
-
-
-
-
-
-
-
-
-
-
