@@ -7,8 +7,6 @@
 // 4. change current player
 // 5. compute if there is a winner
 
-// 1. 
-
 
 let currentPlayer = 'circle';
 const btnElements = document.querySelectorAll('.btn__game');
@@ -17,18 +15,20 @@ let playersSymbol = document.querySelector('.symbol').classList.add('circle');
 
 const onBtnClick = (e) => {
   if (currentPlayer === 'circle') {
-      e.currentTarget.classList.add('circle');
+      e.currentTarget.classList.add('circle__symbol');
       e.currentTarget.disabled=true;
       currentPlayer = 'cross';
 
+//upravuje X/O za HRAJE
       playersSymbol = document.querySelector('.symbol').classList.remove('circle');
       playersSymbol = document.querySelector('.symbol').classList.add('cross');
 
      } else if ((currentPlayer === 'cross')) {
-      e.currentTarget.classList.add('cross');
+      e.currentTarget.classList.add('cross__symbol');
       e.currentTarget.disabled=true;
       currentPlayer = 'circle';
 
+      //upravuje X/O za HRAJE
       playersSymbol = document.querySelector('.symbol').classList.remove('cross');
       playersSymbol = document.querySelector('.symbol').classList.add('circle');
      } 
