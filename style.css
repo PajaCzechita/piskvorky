@@ -1,4 +1,4 @@
-/* Uprava - elemnts */
+/* Styles - elemnts */
 html {
   box-sizing: border-box;
 }
@@ -46,7 +46,15 @@ a {
   text-decoration: none;
 }
 
-/* Uprava nad tridama*/
+span {
+  margin:  1px 1px 1px 1px;
+}
+
+span.symbol {
+  margin: 0;
+}
+
+/* Styles for .classes*/
 
 .game {
   width: 350px;
@@ -58,14 +66,14 @@ a {
   font-size: large;
 }
 
-/* Uprava fotky */
+/* Styles foto */
 .mainfoto {
   width: 100%;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
 
-/* Uprava tlacitek */
+/* Styles - buttons */
 
 .links {
   padding: 0;
@@ -143,7 +151,7 @@ figure {
   padding-right: 30px;
 }
 
-/* Vytvoření kolečka a křížku */
+/* Styles to create O & X */
 .circle {
   border: 2px solid white;
   border-radius: 50%;
@@ -211,27 +219,15 @@ figure {
   transform: rotate(-45deg);
 }
 
-/* Hrací pole*/
-.game__final {
-  max-width: 80vmin;
-  margin: 0 auto 50px;
+/*Styles for menu - house/restart*/
+
+.btns__menu {
+  display: flex;
 }
 
 .navigation__menu {
   display: flex;
   justify-content: space-between;
-}
-
-/* Menu */
-
-span {
-  margin-bottom: 1px;
-}
-
-/*Tlačítka domu a restart*/
-
-.btns__menu {
-  display: flex;
 }
 
 .btn {
@@ -261,6 +257,13 @@ span {
   opacity: 0.8;
 }
 
+/* Styles for the field*/
+
+.game__final {
+  max-width: 80vmin;
+  margin: 0 auto 50px;
+}
+
 .game__field {
   display: grid;
   grid-template-columns: repeat(10, 10fr);
@@ -282,12 +285,7 @@ span {
   opacity: 0.7;
 }
 
-
-/* Styles for playing */
-.btn__game span {
-  display: none;
-}
-
+/* Styles - Media Query*/
 
 @media screen and (min-width: 660px) {
   .game.two {
@@ -310,12 +308,13 @@ span {
   }
 
   /*Styles for menu in game*/
+
   h2 {
     color: white;
     font-size: 30px;
     font-family: sans-serif;
     font-weight: bold;
-}
+  }
 
   .circle {
     border: 3px solid white;
@@ -326,38 +325,38 @@ span {
     margin-left: 5px;
     position: relative;
     top: 5px;
-}
+  }
 
-.cross {
-  position: relative;
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-}
+  .cross {
+    position: relative;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+  }
 
-.cross:before,
-.cross:after {
-  position: absolute;
-  left: 50%;
-  top: 0px;
-  content: ' ';
-  height: 120%;
-  width: 3px;
-  background-color: white;
-}
-.cross:before {
-  transform: rotate(45deg);
-}
-.cross:after {
-  transform: rotate(-45deg);
-}
+  .cross:before,
+  .cross:after {
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    content: ' ';
+    height: 120%;
+    width: 3px;
+    background-color: white;
+  }
+  .cross:before {
+    transform: rotate(45deg);
+  }
+  .cross:after {
+    transform: rotate(-45deg);
+  }
 
   /*Styles for X & O in a game*/
 
   .cross__symbol {
     position: relative;
   }
-  
+
   .cross__symbol:before,
   .cross__symbol:after {
     position: absolute;
@@ -385,5 +384,4 @@ span {
     position: relative;
     top: 3px;
   }
-
 } /* Konec @MediaQuery*/
