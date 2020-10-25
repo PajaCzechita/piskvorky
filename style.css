@@ -155,8 +155,8 @@ figure {
 .circle {
   border: 2px solid white;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 5vmin;
+  height: 5vmin;
   display: inline-block;
   margin-left: 5px;
   position: relative;
@@ -165,30 +165,30 @@ figure {
 
 .circle__symbol::after {
   content: '';
-  border: 3px solid black;
+  border: 0.7vmin solid black;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 4.5vmin;
+  height: 4.5vmin;
   display: inline-block;
   position: relative;
-  top: 3px;
+  top: 2px;
 }
 
 .cross {
   position: relative;
   display: inline-block;
-  width: 25px;
-  height: 25px;
+  width: 3vmin;
+  height: 3vmin;
 }
 
 .cross:before,
 .cross:after {
   position: absolute;
   left: 50%;
-  top: 6px;
+  top: -5px;
   content: ' ';
-  height: 100%;
-  width: 2px;
+  height: 160%;
+  width: 0.6vmin;
   background-color: white;
 }
 .cross:before {
@@ -209,7 +209,7 @@ figure {
   top: 5px;
   content: ' ';
   height: 70%;
-  width: 2px;
+  width: 0.7vmin;
   background-color: black;
 }
 .cross__symbol:before {
@@ -319,8 +319,8 @@ figure {
   .circle {
     border: 3px solid white;
     border-radius: 50%;
-    width: 27px;
-    height: 27px;
+    width: 2.5vmin;
+    height: 2.5vmin;
     display: inline-block;
     margin-left: 5px;
     position: relative;
@@ -330,18 +330,18 @@ figure {
   .cross {
     position: relative;
     display: inline-block;
-    width: 25px;
-    height: 25px;
+    width: 2.4vmin;
+    height: 1.8vmin;
   }
 
   .cross:before,
   .cross:after {
     position: absolute;
     left: 50%;
-    top: 0px;
+    top: -6px;
     content: ' ';
-    height: 120%;
-    width: 3px;
+    height: 150%;
+    width: 0.3vmin;
     background-color: white;
   }
   .cross:before {
@@ -361,10 +361,10 @@ figure {
   .cross__symbol:after {
     position: absolute;
     left: 50%;
-    top: 10px;
+    top: 15px;
     content: ' ';
     height: 70%;
-    width: 4px;
+    width: 0.3vmin;
     background-color: black;
   }
   .cross__symbol:before {
@@ -376,12 +376,12 @@ figure {
 
   .circle__symbol::after {
     content: '';
-    border: 4px solid black;
+    border: 0.3vmin solid black;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 5vmin;
+    height: 5vmin;
     display: inline-block;
     position: relative;
-    top: 3px;
+    top: 4px;
   }
 } /* Konec @MediaQuery*/
