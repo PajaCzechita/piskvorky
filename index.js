@@ -37,3 +37,30 @@ const onBtnClick = (e) => {
 btnElements.forEach(btn => {
   btn.addEventListener('click', onBtnClick) 
 });
+
+
+/* fnce for getting the field */
+const gameField = 10; //size of the gameField
+const wholeField = document.querySelectorAll('game__field'); //select the whole game field
+
+/* 
+1/ create variable that starts with 0
+2/ loop that goes throug the field and compare "clicked field" with the game field
+3/ if equal -> loop end & return row/column
+4/ if not loop +1 & continues
+5/ row = field position/index devided gameField + round down
+6/ column = division remainder 
+*/
+
+const getPosition = (field) => {
+let fieldIndex = 0; 
+while (fieldIndex < wholeField.length) {
+  if (field === wholeField[fieldIndex]) {
+    break
+  } fieldIndex++
+}
+return {
+  row: Math.floor(fieldIndex/gameField),
+  column: fieldIndex % gameField
+}
+}
