@@ -33,9 +33,22 @@ const onBtnClick = (e) => {
         playersSymbol = document.querySelector('.symbol').classList.add('circle');
     }
 
-    isWinningMove(e.currentTarget);
-
+    const finalResult = isWinningMove(e.currentTarget);
+    if (finalResult === true) {
+        if (currentPlayer === 'circle') {
+            let playAgain = confirm('Vyhrál křížek. Chceš spustit novou hru?')
+            if (playAgain === true) {
+                location.reload();
+            }
+        } else {
+            let playAgain = confirm('Vyhrálo kolečko. Chceš spustit novou hru?')
+            if (playAgain === true) {
+                location.reload();
+            }
+        }
+    }
 }
+
 
 btnElements.forEach(btn => {
     btn.addEventListener('click', onBtnClick)
@@ -108,7 +121,7 @@ const isWinningMove = (field) => {
 
     //look to the right
     i = origin.column
-    while (i < boardSize - 1 && symbol === getSymbol(getField(origin.row, i + 1))) {
+    while (i < gameField - 1 && symbol === getSymbol(getField(origin.row, i + 1))) {
         inRow++
         i++
     }
@@ -129,7 +142,7 @@ const isWinningMove = (field) => {
 
     //look to the bottom
     i = origin.column
-    while (i < boardSize - 1 && symbol === getSymbol(getField(i + 1, origin.column))) {
+    while (i < gameField - 1 && symbol === getSymbol(getField(i + 1, origin.column))) {
         inColumn++
         i++
     }
