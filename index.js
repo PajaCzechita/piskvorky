@@ -17,7 +17,7 @@ const onBtnClick = (e) => {
     if (currentPlayer === 'circle') {
         e.currentTarget.classList.add('circle__symbol');
         e.currentTarget.disabled = true;
-        currentPlayer = 'cross';
+        //currentPlayer = 'cross';
 
         //adjust X/O -> HRAJE
         playersSymbol = document.querySelector('.symbol').classList.remove('circle');
@@ -26,29 +26,26 @@ const onBtnClick = (e) => {
     } else if ((currentPlayer === 'cross')) {
         e.currentTarget.classList.add('cross__symbol');
         e.currentTarget.disabled = true;
-        currentPlayer = 'circle';
+        //currentPlayer = 'circle';
 
         //adjust X/O -> HRAJE
         playersSymbol = document.querySelector('.symbol').classList.remove('cross');
         playersSymbol = document.querySelector('.symbol').classList.add('circle');
     }
 
+
+
     const finalResult = isWinningMove(e.currentTarget);
-    if (finalResult === true) {
-        if (currentPlayer === 'circle') {
-            let playAgain = confirm('Vyhrál křížek. Chceš spustit novou hru?')
-            if (playAgain === true) {
-                location.reload();
-            }
-        } else {
-            let playAgain = confirm('Vyhrálo kolečko. Chceš spustit novou hru?')
-            if (playAgain === true) {
-                location.reload();
-            }
+    if (finalResult) { // "finalResult" is the same as "finalResult === true" here -> coz it compares if true === true
+        const playAgain = (currentPlayer === 'circle') ? confirm('Vyhrálo kolečko. Chceš spustit novou hru?') : confirm('Vyhrál křížek. Chceš spustit novou hru?');
+        if (playAgain) {
+            location.reload();
         }
     }
-}
 
+    currentPlayer = (currentPlayer === 'circle') ? 'cross' : 'circle';
+
+}
 
 btnElements.forEach(btn => {
     btn.addEventListener('click', onBtnClick)
