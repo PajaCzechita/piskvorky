@@ -131,14 +131,14 @@ const isWinningMove = (field) => {
     let inColumn = 1 //number for current clicked field
 
     //look to the top
-    i = origin.column
+    i = origin.row
     while (i > 0 && symbol === getSymbol(getField(i - 1, origin.column))) {
         inColumn++
         i--
     }
 
     //look to the bottom
-    i = origin.column
+    i = origin.row
     while (i < gameField - 1 && symbol === getSymbol(getField(i + 1, origin.column))) {
         inColumn++
         i++
